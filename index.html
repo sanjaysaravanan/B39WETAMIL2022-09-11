@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .sample-div {
+      
+      /* Short hand values */
+      /* All sides 8px ( top, right, bottom, left ) */
+      /* margin: 8px; */
+      /* top & bottom -> 8px left & right 16px */
+      margin: 8px 16px;
+      /* top -> 8px rigth&left -> 16px bottom -> 32px */
+      margin: 8px 16px 32px;
+      /* top -> 8px right -> 16px bottom -> 32px left -> 64px */
+      margin: 8px 16px 32px 64px;
+
+      /* individual values */
+      margin-top: 8px;
+      margin-right: 16px;
+      margin-bottom: 32px;
+      margin-left: 64px;
+
+      /* All sides 8px ( top, right, bottom, left ) */
+      padding: 8px;
+      /* top & bottom -> 8px left & right 16px */
+      padding: 8px 16px;
+      /* top -> 8px rigth&left -> 16px bottom -> 32px */
+      padding: 8px 16px 32px;
+      /* top -> 8px right -> 16px bottom -> 32px left -> 64px */
+      padding: 8px 16px 32px 64px;
+
+      /* individual values */
+      margin-top: 8px;
+      margin-right: 16px;
+      margin-bottom: 32px;
+      margin-left: 64px;
+
+      /* Short-hand */
+      /* Border alone accepts width, style, color */
+      /* all side take 10px as width solid and style, black initial color as color */
+      /* text and border color */
+      color: red;
+      border: 10px solid;
+      /* border-color: red */
+      border: 10px solid red;
+      /* Inidividual border-color */
+      border-color: blue;
+      border-style: dotted;
+      border-style: dashed;
+      border-width: 20px;
+      border-top: 20px solid red;
+      border-left: 20px dotted green;
+      border-right: 20px dashed maroon;
+      border-top-color: yellow;
+      border-radius: 100px;
+    }
+
+    .parent {
+      margin: 8px;
+      padding: 20px;
+      border: 3px solid yellow;
+    }
+
+    .child {
+      border: inherit;
+      margin: inherit;
+      padding: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="sample-div" >
+    Some Content
+  </div>
+  <p class="sample-div">Sample Para</p>
+  <!-- 
+    1. Circle
+    2. Rectangle
+    3. Sqaure
+   -->
+  <div style="height: 100px; width: 100px; border-radius: 50px;background-color: violet; margin: 16px;" ></div>
+  <div style="height: 100px; width: 100px;background-color: violet; margin: 16px" ></div>
+  <div style="height: 200px; width: 150px;background-color: violet; margin: 16px" ></div>
+
+  <div class="parent">
+    Content in Parent
+    <div class="child">
+      Content in Child
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+Topics:
+
+  ways to use css (Order of execution is very important)
+    inline (element.style)
+      using CSS inside style attribute is called inline styling
+
+    internal
+      using CSS inside style tag is called internal styling
+
+    external
+      using css in external css file and linking it with link tag
+
+    Priority:
+      Default Priority:
+        inline > line of execution ( internal or enternal ( which gets executed the last takes over the priority ) ) of styles
+
+    Overwrite the Default:
+      use of important keyword ---> overrride the default priority order.
+
+  display: 
+  
+    inline -> only takes the width that the content needed (does **not** gets affected by width or height prop) tries to sit on the space available
+    
+    block -> takes the complete width of the parent element (gets affected by width or height prop)
+    starts only on a new line
+    
+    inline-block -> behaves like a inline ( does not start on new line) but accepts width and height props
+
+  class vs id
+
+    id CSS Selector:
+      use #<id-name> to select a specific tag/tags
+
+      Each Tag should have unique id
+    
+    Class:
+      use .<class-name> to select a grp of tag
+
+      multiple elements can have same class
+
+    --> Priorities
+      id & class for same elements
+
+    multiple classes
+      A tag/element can have muliple classes eg: class="class-one bg-green"
+
+      Priorities will be based on the flow of execution
+  
+  box model: 
+    wrapping the contents of an element with padding, border, margin
+
+    inside to outside 
+      content ---> padding ---> border ---> margin 
+
+    outside to inside
+      margin ---> border ---> padding ---> content
+
+  Parent Inherit:
+    Inheriting the parent CSS properties from child elements/tags
+    eg: border: inherit; // takes parent value if any else default
+
+  Next Session:
+    Position ---> 
+      CSS Property which lets us to position 
+        1. Affects the normal flow of the document
+        2. Space created
+        3. Affected by top, left, right, bottom
+
+      static:
+        1. goes along the normal flow of the document
+        2. Space created
+        3. not Affected by top, left, right, bottom
+
+      with either doucment flow or independent of the document flow with help of top, left, right, bottom
+
+      > relative 
+          relative to its space in parent
+        1. Affects the normal flow of the document
+        2. Space created
+        3. Affected by top, left, right, bottom
+
+      > absolute
+        1. Removed from the normal flow, placed accroding to the closest positioned element parent else to the HTML
+        2. No Space created
+        3. Affected by top, left, right, bottom
+
+      > fixed
+        1. Removed from the normal flow and placed relative to the initial containing block/ultimate parent html tag
+        2. No space created
+        3. Not Affected by scrolling
+        4. Affected by top, left, right, bottom
+
+      > sticky
+        1. Created alogn with normal flow of the document
+        2. SPace created
+        3. is not affected by scrolling after reaching point of the top, left ...
+        1. does not affect the normal flow of the document
+        2. space is created 
+        3. Also, is not affect by the top, left, right, bottom
