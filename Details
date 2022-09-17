@@ -30,11 +30,28 @@ Topics:
 
     id CSS Selector:
       use #<id-name> to select a specific tag/tags
+      
+      #para-one {
+        color: green;
+      }
+      
+      eg: <p id="para-one" >This is para</p>
 
       Each Tag should have unique id
     
     Class:
       use .<class-name> to select a grp of tag
+      
+      .color-green {
+        color: green;
+      }
+      
+      .bg-yellow {
+        background-color: yellow;
+      }
+      
+      eg: <p class="color-green bg-yellow" >This is para</p>
+          <p class="color-green bg-yellow" >This is para Two</p>
 
       multiple elements can have same class
 
